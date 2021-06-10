@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --background: #320c8b;
+    --background-hover: #1c0552;
+    --form: #ececec;
+}
+
+@keyframes btn {
+    100% {
+        transform: scale(.9);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: var(--background);
+    font-size: 14.44px;
+}
+
+form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--form);
+    min-height: 50vh;
+    width: 90vw;
+    border-radius: .5em;
+    box-shadow: 1px 1px 5px #000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    text-align: right;
+}
+
+form div {
+    display: flex;
+}
+
+input {
+    padding: .5em 1em;
+    border-radius: .5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+a {
+    font-size: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 1em;
+    text-decoration: none;
+}
+
+button, .copy {
+    background: var(--background);
+    color: var(--form);
+    font-weight: bold;
+    padding: .7em;
+    border-radius: .3em;
+    cursor: pointer;
+}
+
+button:hover, .copy:hover {
+    transition: .5s;
+    background: var(--background-hover);
+}
+
+.copy {
+    padding: .5em;
+}
+
+.copied {
+    animation: btn .3s ease;
+}
